@@ -21,7 +21,9 @@ export const INDIAN_RIVERS = [
   'Teesta',
   'Damodar',
   'Kosi',
-  'Jhelum'
+  'Jhelum',
+  'Periyar',
+  'Sutlej'
 ];
 
 export const INDIAN_STATES = [
@@ -37,19 +39,21 @@ export const INDIAN_STATES = [
   'Odisha',
   'Gujarat',
   'Uttarakhand',
-  'Delhi'
+  'Delhi',
+  'Jammu & Kashmir',
+  'Meghalaya'
 ];
 
 export const MOCK_SENSORS: SensorData[] = [
   {
     id: 'SENS-IND-01',
-    name: 'Brahmaputra Upper - Guwahati Ghat',
+    name: 'Brahmaputra Upper Reach - Pandu Ghat',
     code: 'GHY-BP-01',
     location: 'Guwahati, Assam',
     state: 'Assam',
     district: 'Kamrup Metro',
     riverBasin: 'Brahmaputra',
-    coordinates: { lat: 26.1856, lng: 91.7450 },
+    coordinates: { lat: 26.1856, lng: 91.7050 },
     waterLevel: 49.85,
     warningLevel: 48.68,
     dangerLevel: 49.68,
@@ -71,9 +75,9 @@ export const MOCK_SENSORS: SensorData[] = [
     district: 'Patna',
     riverBasin: 'Ganga',
     coordinates: { lat: 25.6175, lng: 85.1764 },
-    waterLevel: 48.20,
-    warningLevel: 47.60,
-    dangerLevel: 48.60,
+    waterLevel: 50.12,
+    warningLevel: 49.50,
+    dangerLevel: 50.52,
     rainfall: 45,
     humidity: 78,
     temperature: 27,
@@ -92,7 +96,7 @@ export const MOCK_SENSORS: SensorData[] = [
     district: 'Central Delhi',
     riverBasin: 'Yamuna',
     coordinates: { lat: 28.6657, lng: 77.2415 },
-    waterLevel: 205.33,
+    waterLevel: 205.80,
     warningLevel: 204.50,
     dangerLevel: 205.33,
     rainfall: 32,
@@ -106,14 +110,14 @@ export const MOCK_SENSORS: SensorData[] = [
   },
   {
     id: 'SENS-IND-04',
-    name: 'Godavari Dowleswaram Barrage',
+    name: 'Godavari Dowleswaram Barrage Outflow',
     code: 'RJY-GD-04',
     location: 'Rajahmundry, Andhra Pradesh',
     state: 'Andhra Pradesh',
     district: 'East Godavari',
     riverBasin: 'Godavari',
     coordinates: { lat: 16.9427, lng: 81.7766 },
-    waterLevel: 13.75,
+    waterLevel: 13.90,
     warningLevel: 13.10,
     dangerLevel: 14.20,
     rainfall: 18,
@@ -127,7 +131,7 @@ export const MOCK_SENSORS: SensorData[] = [
   },
   {
     id: 'SENS-IND-05',
-    name: 'Krishna Prakasam Barrage',
+    name: 'Krishna Prakasam Barrage Discharge',
     code: 'VIJ-KB-05',
     location: 'Vijayawada, Andhra Pradesh',
     state: 'Andhra Pradesh',
@@ -148,7 +152,7 @@ export const MOCK_SENSORS: SensorData[] = [
   },
   {
     id: 'SENS-IND-06',
-    name: 'Kaveri Upper Anicut - Mettur',
+    name: 'Kaveri Upper Anicut - Mettur Dam',
     code: 'SLM-KV-06',
     location: 'Mettur, Tamil Nadu',
     state: 'Tamil Nadu',
@@ -211,7 +215,7 @@ export const MOCK_SENSORS: SensorData[] = [
   },
   {
     id: 'SENS-IND-09',
-    name: 'Narmada Golden Bridge',
+    name: 'Narmada Golden Bridge Gauging Post',
     code: 'BHR-NRM-09',
     location: 'Bharuch, Gujarat',
     state: 'Gujarat',
@@ -250,6 +254,49 @@ export const MOCK_SENSORS: SensorData[] = [
     status: 'ONLINE',
     lastUpdated: '6 mins ago',
     telemetryType: 'Radar'
+  },
+  // Global Benchmark River Stations
+  {
+    id: 'SENS-GLB-11',
+    name: 'Rhine River Hydrological Gauge - Cologne',
+    code: 'RHN-CGN-11',
+    location: 'Cologne, Germany',
+    state: 'North Rhine-Westphalia',
+    district: 'Cologne',
+    riverBasin: 'Rhine',
+    coordinates: { lat: 50.9375, lng: 6.9603 },
+    waterLevel: 8.20,
+    warningLevel: 7.80,
+    dangerLevel: 8.50,
+    rainfall: 28,
+    humidity: 76,
+    temperature: 14,
+    batteryLevel: 98,
+    signalStrength: 99,
+    status: 'WARNING',
+    lastUpdated: '10 mins ago',
+    telemetryType: 'Radar'
+  },
+  {
+    id: 'SENS-GLB-12',
+    name: 'Mississippi River Gauge - New Orleans Carrollton',
+    code: 'MSP-NOLA-12',
+    location: 'New Orleans, USA',
+    state: 'Louisiana',
+    district: 'Orleans Parish',
+    riverBasin: 'Mississippi',
+    coordinates: { lat: 29.9511, lng: -90.0715 },
+    waterLevel: 14.80,
+    warningLevel: 15.00,
+    dangerLevel: 17.00,
+    rainfall: 12,
+    humidity: 82,
+    temperature: 25,
+    batteryLevel: 97,
+    signalStrength: 98,
+    status: 'ONLINE',
+    lastUpdated: '14 mins ago',
+    telemetryType: 'Doppler Streamflow'
   }
 ];
 
@@ -273,7 +320,7 @@ export const MOCK_RIVER_STATIONS: RiverStation[] = [
   },
   {
     id: 'RIV-02',
-    name: 'Patna Digha Ghat',
+    name: 'Patna Digha Ghat Gauge',
     riverName: 'Ganga',
     basin: 'Ganga',
     state: 'Bihar',
@@ -290,7 +337,7 @@ export const MOCK_RIVER_STATIONS: RiverStation[] = [
   },
   {
     id: 'RIV-03',
-    name: 'Delhi Iron Bridge',
+    name: 'Delhi Old Railway Iron Bridge',
     riverName: 'Yamuna',
     basin: 'Ganga',
     state: 'Delhi',
@@ -407,7 +454,7 @@ export const MOCK_ALERTS: AlertRecord[] = [
     affectedPopulation: 142000,
     evacuationStatus: 'Mandatory',
     active: true,
-    coordinates: { lat: 26.1856, lng: 91.7450 }
+    coordinates: { lat: 26.1856, lng: 91.7050 }
   },
   {
     id: 'ALT-102',

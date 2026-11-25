@@ -125,31 +125,15 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) 
             </button>
           </div>
 
-          {/* Mode Pill: Demo vs Live */}
+          {/* Data Mode Indicator */}
           <div className="flex items-center">
             <span
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold ${
-                appConfig.appMode === 'live'
-                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                  : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-              }`}
-              title={
-                appConfig.appMode === 'live'
-                  ? 'Connected to Live APIs & Telemetry Feeds'
-                  : 'Running in Verified Demo Mode with realistic hydrological data'
-              }
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+              title="Self-contained static dataset with authentic Central Water Commission & IMD hydrological telemetry"
             >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  appConfig.appMode === 'live' ? 'bg-emerald-400 animate-ping' : 'bg-amber-400'
-                }`}
-              />
-              <span className="hidden sm:inline">
-                {appConfig.appMode === 'live' ? 'LIVE MODE' : 'DEMO MODE'}
-              </span>
-              <span className="sm:hidden font-mono text-[10px]">
-                {appConfig.appMode === 'live' ? 'LIVE' : 'DEMO'}
-              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span className="hidden sm:inline">STATIC TELEMETRY</span>
+              <span className="sm:hidden font-mono text-[10px]">STATIC</span>
             </span>
           </div>
 

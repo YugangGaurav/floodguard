@@ -27,7 +27,7 @@ import {
 } from 'recharts';
 import { useApp } from '../context/AppContext';
 import { SendAlertModal } from '../components/dashboard/SendAlertModal';
-import { InteractiveFallbackMap } from '../components/maps/InteractiveFallbackMap';
+import { LeafletMapComponent } from '../components/maps/LeafletMapComponent';
 
 export const Overview: React.FC = () => {
   const { sensors, alerts, forecastTimeline, riverStations } = useApp();
@@ -249,7 +249,7 @@ export const Overview: React.FC = () => {
           </div>
 
           <div className="h-56 w-full rounded-xl overflow-hidden border border-slate-200">
-            <InteractiveFallbackMap height="100%" isMiniMap={true} />
+            <LeafletMapComponent height="100%" isMiniMap={true} />
           </div>
 
           <div className="pt-3 flex items-center justify-between text-xs text-slate-500">

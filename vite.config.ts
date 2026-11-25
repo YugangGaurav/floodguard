@@ -5,8 +5,8 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Configurable base path for GitHub Pages deployment
-  base: process.env.GITHUB_ACTIONS ? '/floodguard/' : './',
+  // Base path set to './' for universal compatibility on GitHub Pages and custom subdomains
+  base: './',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -21,6 +21,7 @@ export default defineConfig({
           charts: ['recharts'],
           icons: ['lucide-react'],
           maps: ['@googlemaps/js-api-loader'],
+          leaflet: ['leaflet'],
           supabase: ['@supabase/supabase-js'],
         },
       },

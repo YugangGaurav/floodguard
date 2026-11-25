@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { getGoogleMapsLoader, hasValidGoogleMapsKey } from '../../services/maps/googleMapsLoader';
-import { InteractiveFallbackMap } from './InteractiveFallbackMap';
+import { LeafletMapComponent } from './LeafletMapComponent';
 import { SensorData, RiverStation, AlertRecord } from '../../types';
-import { Info, MapPin, KeyRound, ExternalLink } from 'lucide-react';
+import { KeyRound, ExternalLink, Map as MapIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface GoogleMapComponentProps {
@@ -120,7 +120,7 @@ export const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({
       .catch((err) => {
         console.warn('Google Maps load error:', err);
         if (isMounted) {
-          setLoadError('Failed to load Google Maps tiles. Switched to fallback vector map.');
+          setLoadError('Failed to load Google Maps tiles. Switched to high-resolution map tiles.');
         }
       });
 
@@ -129,29 +129,29 @@ export const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({
     };
   }, [hasKey, appConfig.googleMapsApiKey, sensors, isMiniMap]);
 
-  // If no key or error occurred or isMiniMap, render rich InteractiveFallbackMap
+  // When no key or in mini-map mode, render full interactive tile LeafletMapComponent
   if (!hasKey || loadError || isMiniMap) {
     return (
       <div className="relative w-full flex flex-col">
-        {!isMiniMap && !hasKey && (
-          <div className="mb-3 px-4 py-2.5 bg-sky-50 border border-sky-200 rounded-xl flex items-center justify-between text-xs text-sky-900 shadow-xs">
+        {!isMiniMap && (
+          <div className="mb-3 px-4 py-2.5 bg-slate-900 text-white rounded-xl flex items-center justify-between text-xs shadow-sm">
             <div className="flex items-center gap-2">
-              <KeyRound className="w-4 h-4 text-sky-600 shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
               <span>
-                <strong>Interactive Fallback Map Active:</strong> You can add your Google Maps API key in Settings or <code>.env.local</code> to activate satellite & terrain tiles.
+                <strong>Static Real-World Map Active:</strong> Rendering live cartographic tiles (Street, Satellite, Topo) without requiring external database or API keys.
               </span>
             </div>
             <Link
               to="/settings"
-              className="font-semibold text-sky-700 hover:text-sky-900 underline flex items-center gap-1 shrink-0 ml-2"
+              className="font-semibold text-sky-400 hover:text-sky-300 underline flex items-center gap-1 shrink-0 ml-2"
             >
-              <span>Add Key</span>
+              <span>Map Key Settings</span>
               <ExternalLink className="w-3 h-3" />
             </Link>
           </div>
         )}
 
-        <InteractiveFallbackMap
+        <LeafletMapComponent
           height={height}
           onMarkerClick={onMarkerClick}
           selectedStationId={selectedStationId}
@@ -162,7 +162,10 @@ export const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({
   }
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner" style={{ height }}>
+    <div
+      className="relative w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner"
+      style={{ height }}
+    >
       <div ref={mapContainerRef} className="w-full h-full" />
     </div>
   );
