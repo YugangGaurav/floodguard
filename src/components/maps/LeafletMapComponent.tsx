@@ -29,9 +29,18 @@ export const LeafletMapComponent: React.FC<LeafletMapProps> = ({
   useEffect(() => {
     if (!mapContainerRef.current) return;
 
+    // Safely remove any existing map instance and clear container identifier
     if (mapInstanceRef.current) {
-      mapInstanceRef.current.remove();
+      try {
+        mapInstanceRef.current.remove();
+      } catch (e) {
+        // ignore
+      }
       mapInstanceRef.current = null;
+    }
+
+    if (mapContainerRef.current && (mapContainerRef.current as any)._leaflet_id) {
+      (mapContainerRef.current as any)._leaflet_id = null;
     }
 
     // Center on India or Global
@@ -39,12 +48,18 @@ export const LeafletMapComponent: React.FC<LeafletMapProps> = ({
       regionSettings.mode === 'global' ? [20.0, 0.0] : [22.5937, 78.9629];
     const initialZoom = isMiniMap ? 4 : regionSettings.mode === 'global' ? 2 : 5;
 
-    const map = L.map(mapContainerRef.current, {
-      center: centerLatLng,
-      zoom: initialZoom,
-      zoomControl: false,
-      attributionControl: !isMiniMap,
-    });
+    let map: L.Map;
+    try {
+      map = L.map(mapContainerRef.current, {
+        center: centerLatLng,
+        zoom: initialZoom,
+        zoomControl: false,
+        attributionControl: !isMiniMap,
+      });
+    } catch (err) {
+      console.warn('Map initialization:', err);
+      return;
+    }
 
     mapInstanceRef.current = map;
 

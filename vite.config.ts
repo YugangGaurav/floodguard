@@ -5,8 +5,8 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Base path set to './' for universal compatibility on GitHub Pages and custom subdomains
-  base: './',
+  // Configured base path for GitHub Pages repository: /floodguard/
+  base: process.env.GITHUB_ACTIONS ? '/floodguard/' : './',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
