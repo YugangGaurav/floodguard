@@ -27,7 +27,7 @@ export const Profile: React.FC = () => {
         <div className="flex-1 text-center sm:text-left space-y-2">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-slate-900">Dr. Rajesh Varma</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-slate-900">Dr. Yugang Gaurav</h1>
               <p className="text-xs text-slate-500 font-medium">Chief Hydrological Operations Officer</p>
             </div>
             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800 border border-sky-200">

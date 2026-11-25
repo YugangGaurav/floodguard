@@ -248,7 +248,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) 
             {showProfileMenu && (
               <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-slate-200 py-2 z-50 text-slate-800">
                 <div className="px-4 py-2 border-b border-slate-100">
-                  <p className="text-xs font-semibold text-slate-900">Dr. Rajesh Varma</p>
+                  <p className="text-xs font-semibold text-slate-900">Dr. Yugang Gaurav</p>
                   <p className="text-[11px] text-slate-500">Chief Hydrological Officer</p>
                   <span className="inline-block mt-1 text-[10px] bg-sky-100 text-sky-800 font-medium px-2 py-0.5 rounded">
                     Central Water Commission (CWC)
