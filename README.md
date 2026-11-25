@@ -1,6 +1,6 @@
 # FloodGuard – Intelligent Flood Monitoring & Early Warning System
 
-[![Deploy to GitHub Pages](https://github.com/YOUR-USERNAME/floodguard/actions/workflows/deploy.yml/badge.svg)](https://github.com/YOUR-USERNAME/floodguard/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/YugangGaurav/floodguard/actions/workflows/deploy.yml/badge.svg)](https://github.com/YugangGaurav/floodguard/actions/workflows/deploy.yml)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
