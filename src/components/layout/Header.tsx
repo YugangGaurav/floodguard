@@ -238,20 +238,20 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) 
               }}
               className="flex items-center gap-2 pl-1 pr-2 py-1 rounded-lg border border-slate-700 bg-navy-900 hover:bg-slate-800 text-slate-200 transition-colors"
             >
-              <div className="w-6 h-6 rounded-full bg-sky-600/30 text-sky-400 border border-sky-500/40 flex items-center justify-center font-semibold text-xs">
-                A
+              <div className="w-6 h-6 rounded-full bg-sky-600/30 text-sky-400 border border-sky-500/40 flex items-center justify-center font-bold text-[10px]">
+                YG
               </div>
-              <span className="text-xs font-medium hidden sm:inline">Admin</span>
+              <span className="text-xs font-medium hidden sm:inline">Yugang Gaurav</span>
               <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
             </button>
 
             {showProfileMenu && (
-              <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-slate-200 py-2 z-50 text-slate-800">
+              <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-slate-200 py-2 z-50 text-slate-800">
                 <div className="px-4 py-2 border-b border-slate-100">
-                  <p className="text-xs font-semibold text-slate-900">Dr. Yugang Gaurav</p>
-                  <p className="text-[11px] text-slate-500">Chief Hydrological Officer</p>
-                  <span className="inline-block mt-1 text-[10px] bg-sky-100 text-sky-800 font-medium px-2 py-0.5 rounded">
-                    Central Water Commission (CWC)
+                  <p className="text-xs font-bold text-slate-900">Yugang Gaurav</p>
+                  <p className="text-[11px] text-slate-500 font-medium">gauravyugang@gmail.com</p>
+                  <span className="inline-block mt-1 text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded">
+                    Lead Architect & System Administrator
                   </span>
                 </div>
                 <div className="py-1">
