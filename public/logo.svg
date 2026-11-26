@@ -9,6 +9,6 @@
   <path d="M18 6C18 6 8 18 8 25C8 29.4183 11.5817 33 16 33C16.7 33 17.37 32.9 18 32.74C18.63 32.9 19.3 33 20 33C24.4183 33 28 29.4183 28 25C28 18 18 6 18 6Z" fill="url(#logoGrad)"/>
   <path d="M18 13C18 13 12 20 12 24C12 26.5 13.5 28.5 15.5 29C14.5 27.5 14 25.5 14 23.5C14 19 18 13 18 13Z" fill="#FFFFFF" fill-opacity="0.4"/>
   
-  <!-- Text FloodGuard -->
-  <text x="36" y="27" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">Flood<tspan fill="#38BDF8">Guard</tspan></text>
+  <!-- Text Jalsetu -->
+  <text x="36" y="27" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">Jal<tspan fill="#38BDF8">setu</tspan></text>
 </svg>

@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) 
             </div>
             <div className="flex items-baseline gap-2">
               <span className="text-xl font-bold tracking-tight text-white">
-                Flood<span className="text-sky-400">Guard</span>
+                Jal<span className="text-sky-400">setu</span>
               </span>
               <span className="text-xs font-normal text-slate-400 hidden sm:inline-block border-l border-slate-600 pl-2">
                 Agency Dashboard

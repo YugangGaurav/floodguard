@@ -1,4 +1,4 @@
-name: Deploy FloodGuard to GitHub Pages
+name: Deploy Jalsetu to GitHub Pages
 
 on:
   push:

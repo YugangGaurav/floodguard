@@ -65,7 +65,7 @@ export const Reports: React.FC = () => {
     });
 
     // Simulate CSV or Text file download
-    const dummyContent = `FLOODGUARD SITUATION REPORT\nTitle: ${title}\nGenerated: ${new Date().toISOString()}\nActive Sensors: ${sensors.length}\nRiver Stations: ${riverStations.length}\nActive Alerts: ${alerts.filter((a) => a.active).length}`;
+    const dummyContent = `JALSETU SITUATION REPORT\nTitle: ${title}\nGenerated: ${new Date().toISOString()}\nActive Sensors: ${sensors.length}\nRiver Stations: ${riverStations.length}\nActive Alerts: ${alerts.filter((a) => a.active).length}`;
     const blob = new Blob([dummyContent], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');

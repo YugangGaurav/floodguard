@@ -1,4 +1,4 @@
-# FloodGuard – Intelligent Flood Monitoring & Early Warning System
+# Jalsetu – Intelligent Flood Monitoring & Early Warning System
 
 [![Deploy to GitHub Pages](https://github.com/YugangGaurav/floodguard/actions/workflows/deploy.yml/badge.svg)](https://github.com/YugangGaurav/floodguard/actions/workflows/deploy.yml)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -7,9 +7,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**FloodGuard** is an enterprise-grade, responsive, static web application designed for real-time hydrological stage discharge monitoring, Doppler precipitation radar visualization, and early flood disaster warnings.
+**Jalsetu** is an enterprise-grade, responsive, static web application designed for real-time hydrological stage discharge monitoring, Doppler precipitation radar visualization, and early flood disaster warnings.
 
-Built **India-First** with seamless transboundary and global river basin monitoring capabilities, FloodGuard requires **no permanently running Node.js backend** and deploys natively to **GitHub Pages** via automated GitHub Actions.
+Built **India-First** with seamless transboundary and global river basin monitoring capabilities, Jalsetu requires **no permanently running Node.js backend** and deploys natively to **GitHub Pages** via automated GitHub Actions.
 
 ---
 
@@ -33,7 +33,7 @@ Built **India-First** with seamless transboundary and global river basin monitor
 
 ## Visual Design & User Interface
 
-FloodGuard's user interface is styled with a deep navy agency header, responsive sidebar navigation, clean card elevations, and color-coded danger thresholds:
+Jalsetu's user interface is styled with a deep navy agency header, responsive sidebar navigation, clean card elevations, and color-coded danger thresholds:
 
 - **Top Agency Header**: Deep navy background (`#142338`), water drop identity branding, global basin search, India 🇮🇳 / Global 🌐 scope switcher, real-time telemetry stream controller, active emergency alerts badge, and Administrator credential menu.
 - **Sidebar Navigation**: Persistent navigation featuring active state highlights with icons, telemetry count badges, and system uptime indicators.
@@ -130,13 +130,13 @@ FloodGuard's user interface is styled with a deep navy agency header, responsive
 ## Project Structure
 
 ```text
-floodguard/
+Jalsetu/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # Automated GitHub Pages CI/CD workflow
 ├── public/
 │   ├── favicon.svg             # Water drop SVG favicon
-│   ├── logo.svg                # Full FloodGuard brand logo
+│   ├── logo.svg                # Full Jalsetu brand logo
 │   └── 404.html                # Single Page App redirect fallback
 ├── src/
 │   ├── components/
@@ -202,8 +202,8 @@ floodguard/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/floodguard.git
-   cd floodguard
+   git clone https://github.com/YOUR-USERNAME/Jalsetu.git
+   cd Jalsetu
    ```
 
 2. **Install dependencies**:
@@ -260,7 +260,7 @@ cp .env.example .env.local
 
 ## Operating Modes: Demo vs Live Mode
 
-FloodGuard supports two distinct operating modes:
+Jalsetu supports two distinct operating modes:
 
 ### 1. DEMO MODE (Default)
 - **Zero Configuration Required**: Operates out of the box without any third-party credentials.
@@ -276,7 +276,7 @@ FloodGuard supports two distinct operating modes:
 
 ## Google Maps API Setup & Security
 
-FloodGuard is designed to gracefully load Google Maps when configured, and **never crash** if the key is missing or invalid.
+Jalsetu is designed to gracefully load Google Maps when configured, and **never crash** if the key is missing or invalid.
 
 ### Obtaining a Google Maps API Key
 
@@ -292,7 +292,7 @@ Because this is a static frontend application running in the user's browser, the
 1. **Application Restrictions**:
    - Choose **Websites (HTTP referrers)**.
    - Add your local development URL: `http://localhost:3000/*` and `http://127.0.0.1:3000/*`.
-   - Add your GitHub Pages URL: `https://YOUR-USERNAME.github.io/floodguard/*`.
+   - Add your GitHub Pages URL: `https://YOUR-USERNAME.github.io/Jalsetu/*`.
 2. **API Restrictions**:
    - Select **Restrict key**.
    - Choose only **Maps JavaScript API** and **Geocoding API**.
@@ -302,7 +302,7 @@ Because this is a static frontend application running in the user's browser, the
 
 ## Supabase Integration (Optional)
 
-FloodGuard is ready for optional Supabase backend synchronization for persistent user telemetry, alerts, and incident reports.
+Jalsetu is ready for optional Supabase backend synchronization for persistent user telemetry, alerts, and incident reports.
 
 ### Supabase Table Schema (SQL)
 
@@ -369,21 +369,21 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1Ni...
 
 ## GitHub Pages Deployment Guide
 
-FloodGuard is pre-configured with official GitHub Actions workflows for seamless one-click continuous deployment.
+Jalsetu is pre-configured with official GitHub Actions workflows for seamless one-click continuous deployment.
 
 ### Step-by-Step Repository Setup
 
 1. **Create a new repository on GitHub**:
-   - Name it `floodguard`.
+   - Name it `Jalsetu`.
    - Set visibility to **Public** (or Private if using GitHub Enterprise / Pro).
 
 2. **Initialize git and commit the codebase**:
    ```bash
    git init
    git add .
-   git commit -m "feat: complete FloodGuard application"
+   git commit -m "feat: complete Jalsetu application"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/floodguard.git
+   git remote add origin https://github.com/YOUR-USERNAME/Jalsetu.git
    git push -u origin main
    ```
 
@@ -402,7 +402,7 @@ FloodGuard is pre-configured with official GitHub Actions workflows for seamless
    - Any commit pushed to the `main` branch will automatically trigger `.github/workflows/deploy.yml`.
    - The workflow compiles the production build, uploads the artifact, and publishes the live site at:
      ```text
-     https://YOUR-USERNAME.github.io/floodguard/
+     https://YOUR-USERNAME.github.io/Jalsetu/
      ```
 
 ---
@@ -413,7 +413,7 @@ FloodGuard is pre-configured with official GitHub Actions workflows for seamless
 No! This is the intended fallback behavior when no Google Maps API key is configured. The fallback map provides complete interactive functionality, including river basin geometries, sensor status pins, and telemetry inspection popups. To use live Google Maps satellite tiles, simply add your key on the **Settings** page or in `.env.local`.
 
 ### Q2: Why does refreshing pages on GitHub Pages sometimes give a 404 on single-page apps?
-FloodGuard uses React Router's `HashRouter` (e.g. `#/map`, `#/rivers`), which guarantees that client-side routes will never 404 upon browser reload or direct URL sharing on static web hosts like GitHub Pages. A `404.html` SPA redirect fallback is also included in `public/`.
+Jalsetu uses React Router's `HashRouter` (e.g. `#/map`, `#/rivers`), which guarantees that client-side routes will never 404 upon browser reload or direct URL sharing on static web hosts like GitHub Pages. A `404.html` SPA redirect fallback is also included in `public/`.
 
 ### Q3: How do I test the production build before pushing to GitHub?
 Run:
@@ -427,11 +427,11 @@ This serves the exact production output compiled in `dist/` over a local HTTP se
 
 ## API Integration Architecture
 
-When transitioning from Demo Mode to production enterprise deployment, FloodGuard uses modular service adapters:
+When transitioning from Demo Mode to production enterprise deployment, Jalsetu uses modular service adapters:
 
 ```text
 ┌───────────────────────────────────────────────────────────┐
-│                     FloodGuard UI Layer                   │
+│                     Jalsetu UI Layer                   │
 │   (Overview, Live Map, Forecast, Sensors, Alerts, Rivers)  │
 └─────────────────────────────┬─────────────────────────────┘
                               │

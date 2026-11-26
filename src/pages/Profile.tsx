@@ -38,7 +38,7 @@ export const Profile: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-slate-600 pt-1">
             <span className="flex items-center gap-1.5">
               <Building className="w-4 h-4 text-slate-400" />
-              <span>FloodGuard Command Network • Central Water Commission (CWC) Grid</span>
+              <span>Jalsetu Command Network • Central Water Commission (CWC) Grid</span>
             </span>
             <a
               href="mailto:gauravyugang@gmail.com"

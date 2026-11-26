@@ -333,7 +333,7 @@ export const Settings: React.FC = () => {
               className="w-full text-xs font-mono rounded-xl border border-slate-300 p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
             />
             <div className="text-[11px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-100 leading-relaxed">
-              <strong>Security Recommendation:</strong> Restrict your Google Maps browser key in Google Cloud Console using <em>HTTP referrers (web sites)</em>, e.g. <code>https://YOUR-USERNAME.github.io/floodguard/*</code> and <code>http://localhost:3000/*</code>. Enable Maps JavaScript API and Geocoding API.
+              <strong>Security Recommendation:</strong> Restrict your Google Maps browser key in Google Cloud Console using <em>HTTP referrers (web sites)</em>, e.g. <code>https://YOUR-USERNAME.github.io/jalsetu/*</code> and <code>http://localhost:3000/*</code>. Enable Maps JavaScript API and Geocoding API.
             </div>
           </div>
 
